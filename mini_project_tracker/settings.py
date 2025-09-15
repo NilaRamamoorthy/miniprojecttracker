@@ -57,6 +57,8 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://miniprojecttracker.onrender.com",
+
 
     # add your frontend origin here
 ]
