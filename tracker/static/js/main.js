@@ -66,7 +66,7 @@ window.submitProject = function () {
 }
 
 window.markComplete = function (id) {
-  axios.put(`projects/${id}/`, { status: 'completed' })
+  axios.patch(`projects/${id}/`, { status: 'completed' })
     .then(() => fetchProjects())
     .catch(err => console.error(err));
 }
