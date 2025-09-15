@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h3>Trainee Dashboard</h3>
+<div id="projectList"></div>
+<script type="module" src="{% static 'js/main.js' %}"></script>
+<script>
+  const IS_TRAINER = false;
+</script>
+
+{% endblock %}

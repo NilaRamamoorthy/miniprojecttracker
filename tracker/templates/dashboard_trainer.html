@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<h3>Trainer Dashboard</h3>
+<button class="btn btn-primary" onclick="assignProjectForm()">Assign Project</button>
+<div id="projectList"></div>
+<script type="module" src="{% static 'js/main.js' %}"></script>
+<script>
+  const IS_TRAINER = true;
+</script>
+
+{% endblock %}

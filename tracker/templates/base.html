@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Mini Project Tracker</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Project Tracker</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<div id="loading" style="display:none;" class="text-center p-3 text-primary fw-bold">Loading...</div>
+<div class="container mt-4">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
