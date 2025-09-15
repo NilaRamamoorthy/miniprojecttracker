@@ -3,10 +3,11 @@ import axios from './axios.js';
 document.addEventListener('DOMContentLoaded', fetchProjects);
 
 function fetchProjects() {
-  console.log('Fetching projects from:', axios.defaults.baseURL + 'projects/');
+console.log('Inside fetchProjects');
   
   axios.get('projects/')
     .then(res => {
+        console.log('Got projects:', res.data)
       if (res.data.length === 0) {
         document.querySelector('#projectList').innerHTML = '<p class="text-muted">No projects found.</p>';
         return;
@@ -25,7 +26,7 @@ function fetchProjects() {
       document.querySelector('#projectList').innerHTML = list;
     })
     .catch(err => {
-      console.error('Failed to fetch projects:', err);
+     console.log('fetchProjects error:', err);
       document.querySelector('#projectList').innerHTML = '<p class="text-danger">Failed to load projects.</p>';
     });
 }
